@@ -1,0 +1,77 @@
+.datatableContainer {
+    margin: 2rem 0;
+}
+
+.datatable {
+    $breakpoint-small: 599px;
+
+    width: 70%;
+    margin: auto;
+    border: 1px solid gray;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+    font-size: 1.2rem;
+
+    @media (max-width: $breakpoint-small) {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    &__header {
+       height: 3rem;
+       &:first-child {
+        text-align: left;
+        padding-left: 1.5rem;
+       }
+       th:first-child {
+        padding-left: 1.5rem;
+       }
+       th:nth-child(2) {
+        padding-right: 1.5rem;
+        text-align: right;
+       }
+    }
+
+    &__row {
+        height: 3rem;
+        text-align: left;
+        padding-left: 0.5rem;
+        &:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        td {
+            padding-left: 1rem;
+            height: 4rem;
+            align-items: center;
+            line-height: 1.2rem;
+        }
+    }
+
+    &__firstCell {
+        display: flex;
+        @media (max-width: $breakpoint-small) {
+            display: initial;
+        }
+    }
+
+    &__secondCell {
+        text-align: right;
+        padding-right: 1.5rem;
+    }
+
+    &__name {
+        @media (max-width: $breakpoint-small) {
+            padding-left: 1rem;
+        }
+    }
+
+    &__age {
+        margin-left: auto;
+        padding-left: 1rem;
+        @media (max-width: $breakpoint-small) {
+            margin-left: 0;
+            padding-left: 1rem;
+        }
+    }
+}

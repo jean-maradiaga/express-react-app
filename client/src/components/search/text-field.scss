@@ -1,0 +1,18 @@
+.field {
+    $breakpoint-small: 599px;
+
+    &__container {
+        margin: 2rem 0;
+    }
+
+    &__input {
+        width: 70%;
+        font-size: 16px;
+        padding: 1rem 2rem;
+        border: 1px solid #ddd;
+    }
+
+    @media (max-width: $breakpoint-small) {
+        width: 80%;
+    }
+}
